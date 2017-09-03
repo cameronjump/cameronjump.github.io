@@ -2,7 +2,7 @@ var circle =[];
 var myFont;
 
 function preload() {
-  myFont = loadFont('assets/Ubuntu-R.ttf');
+  myFont = loadFont('Ubuntu-R.ttf');
 }
 
 function setup() {
@@ -60,7 +60,7 @@ function setup() {
     /*position (x,y)*/ 150, 400,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color('violet'),'\nWritten in\nP5.js',22,
-    /*link*/ "assets/resumeweb.pdf"
+    /*link*/ "resumeweb.pdf"
   );
   circle[5] = new Circle(
     /*diamater*/ 200,
