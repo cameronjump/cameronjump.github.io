@@ -53,7 +53,7 @@ function setup() {
     /*position (x,y)*/ width-400,150,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color('red'),'\nClick Me\nResume',22,
-    /*link*/ "https://github.com/cameronjump/cameronjump.github.io/blob/master/resumeweb.pdf"
+    /*link*/ "https://www.dropbox.com/s/qvb9qs3tzmga02u/resumeweb.pdf?dl=0"
   );
   circle[4] = new Circle(
     /*diamater*/ 200,
