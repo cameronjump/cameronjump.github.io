@@ -7,15 +7,15 @@ function preload() {
 
 function setup() {
   //creates minimum of canvas for greater compatibility
-  if(windowWidth<800 && windowHeight < 800) {
-    createCanvas(800,800);
+  if(windowWidth<850 && windowHeight < 850) {
+    createCanvas(850,850);
   }
   else {
     createCanvas(windowWidth,windowHeight);
   }
 
   //random array
-  r = [-3,-2,2,3];
+  r = [-3-2,2,3];
 
   // creates circle for mouse
   mouse = new Circle(
@@ -29,56 +29,56 @@ function setup() {
   //Creates floating circles
   circle[0] = new Circle(
     /*diamater*/ 200,
-    /*position (x,y)*/ 150, 150,
+    /*position (x,y)*/ 110, 110,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color('blue'),'Bachelors of Science\nElectrical Engineering\nexpected\nDecember 2019',16,
     /*link*/ ""
   );
   circle[1] = new Circle(
     /*diamater*/ 200,
-    /*position (x,y)*/ width-150, 150,
+    /*position (x,y)*/ 320, 110,
     /*speed (x,y)*/ random(r),random(5),
     /*color,text,fontsize*/ color('green'),'Looking for\nSummer 2018 Internship\nSoftware Engineering\nControl Engineering   \nElectrical Engineering',16,
     /*link*/ ""
   );
   circle[2] = new Circle(
     /*diamater*/ 200,
-    /*position (x,y)*/ 400, 150,
+    /*position (x,y)*/ 530, 110,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color(255,128,0),'\nGo Pokes!\nOklahoma State University\nCEAT',16,
     /*link*/ ""
   );
   circle[3] = new Circle(
     /*diamater*/ 200,
-    /*position (x,y)*/ width-400,150,
+    /*position (x,y)*/ 740,110,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color('red'),'\nClick Me\nResume',22,
-    /*link*/ "https://www.dropbox.com/s/qvb9qs3tzmga02u/resumeweb.pdf?dl=0"
+    /*link*/ "resumeweb.pdf"
   );
   circle[4] = new Circle(
     /*diamater*/ 200,
-    /*position (x,y)*/ 150, 400,
+    /*position (x,y)*/ 110, 320,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color('violet'),'\nWritten in\nP5.js',22,
-    /*link*/ "https://p5js.org/"
+    /*link*/ "assets/resumeweb.pdf"
   );
   circle[5] = new Circle(
     /*diamater*/ 200,
-    /*position (x,y)*/ width-150, 400,
+    /*position (x,y)*/ 320, 320,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color(51,0,102),'Skills:\nJava\nSwift\nPython\nJavaScript',16,
     /*link*/ ""
   );
   circle[6] = new Circle(
     /*diamater*/ 200,
-    /*position (x,y)*/ 400, 400,
+    /*position (x,y)*/ 530, 320,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color(0,255,255),'\nClick Me\nContact Me',22,
     /*link*/ "mailto:cameron.jump@okstate.edu?subject=Oi%20Cameron!"
   );
   circle[7] = new Circle(
     /*diamater*/ 200,
-    /*position (x,y)*/ width-400, 400,
+    /*position (x,y)*/ 740, 320,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color(255,210,0),'Hobbies:\nRunning\nElectronic Protyping\nProgramming',16,
     /*link*/ ""
@@ -97,7 +97,7 @@ function draw() {
 
   //reverses speed if object is outside canvas
   for(var i=0; i<circle.length; i++) {
-    circle[i].updateSign();
+    circle[i].checkBorder();
   }
 
   //recursively compares all ellipses and computes resultant vectors if intersecting
@@ -137,8 +137,8 @@ function mousePressed() {
 
 //called when window resizes, resizes canvas with minimum size if needed
 function windowResized() {
-  if(windowWidth<800 && windowHeight < 800) {
-    createCanvas(800,800);
+  if(windowWidth<850 && windowHeight < 850) {
+    createCanvas(850,850);
   }
   else {
     createCanvas(windowWidth,windowHeight);
@@ -190,12 +190,12 @@ function intersect(circle1, circle2) {
 
 //class which holds circles
 function Circle(idiam, ixpos, iypos, ixspeed, iyspeed, icolor, itext, ifontsize, ilink) {
-  this.diam = idiam;       // default 200 // Width of the shape
+  this.diam = idiam;
   this.xpos = ixpos;
-  this.ypos = iypos;    // Starting position of shape
+  this.ypos = iypos;
 
-  this.xspeed = ixspeed;  // default 2 // Speed of the shape
-  this.yspeed = iyspeed;  // default 2 //Speed of the shape
+  this.xspeed = ixspeed;
+  this.yspeed = iyspeed;
 
   this.link = ilink;
 
@@ -219,7 +219,7 @@ function Circle(idiam, ixpos, iypos, ixspeed, iyspeed, icolor, itext, ifontsize,
   }
 
   // Test to see if the shape exceeds the boundaries of the screen
-  this.updateSign = function() {
+  this.checkBorder = function() {
     if (this.xpos > width - this.diam/2) {
       this.xspeed = -1*abs(this.xspeed);
     }
