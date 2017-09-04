@@ -53,14 +53,14 @@ function setup() {
     /*position (x,y)*/ 740,110,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color('red'),'\nClick Me\nResume',22,
-    /*link*/ "resumeweb.pdf"
+    /*link*/ "https://drive.google.com/open?id=0B84rbuy7iqk_YUZ0SlBMZ2dXdGM"
   );
   circle[4] = new Circle(
     /*diamater*/ 200,
     /*position (x,y)*/ 110, 320,
     /*speed (x,y)*/ random(r), random(r),
     /*color,text,fontsize*/ color('violet'),'\nWritten in\nP5.js',22,
-    /*link*/ "assets/resumeweb.pdf"
+    /*link*/ "https://p5js.org/"
   );
   circle[5] = new Circle(
     /*diamater*/ 200,
