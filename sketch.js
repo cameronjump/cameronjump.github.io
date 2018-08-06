@@ -31,57 +31,57 @@ function setup() {
     /*diamater*/ 200,
     /*position (x,y)*/ 110, 110,
     /*speed (x,y)*/ random(r), random(r),
-    /*color,text,fontsize*/ color('blue'),'Bachelors of Science\nElectrical Engineering\nexpected\nDecember 2019',16,
+    /*color,text,fontsize*/ color(0,110,109),'Bachelors of Science\nin\nElectrical and Computer\nEngineering\nexpected\nSpring 2020',16,
     /*link*/ ""
   );
   circle[1] = new Circle(
     /*diamater*/ 200,
     /*position (x,y)*/ 320, 110,
     /*speed (x,y)*/ random(r),random(5),
-    /*color,text,fontsize*/ color('green'),'Looking for\nSummer 2018 Internship\nSoftware Engineering\nControl Engineering   \nElectrical Engineering',16,
+    /*color,text,fontsize*/ color(236,219,84),'Looking for\nSummer 2019 Internship\nin\nSoftware Engineering',16,
     /*link*/ ""
   );
   circle[2] = new Circle(
     /*diamater*/ 200,
     /*position (x,y)*/ 530, 110,
     /*speed (x,y)*/ random(r), random(r),
-    /*color,text,fontsize*/ color(255,128,0),'\nGo Pokes!\nOklahoma State University\nCEAT',16,
+    /*color,text,fontsize*/ color(228,122,46),'\nGo Pokes!\nOklahoma State University\nCEAT',16,
     /*link*/ ""
   );
   circle[3] = new Circle(
     /*diamater*/ 200,
     /*position (x,y)*/ 740,110,
     /*speed (x,y)*/ random(r), random(r),
-    /*color,text,fontsize*/ color('red'),'\nClick Me\nResume',22,
-    /*link*/ "https://drive.google.com/open?id=0B84rbuy7iqk_YUZ0SlBMZ2dXdGM"
+    /*color,text,fontsize*/ color(233,75,60),'\nClick Me\nResume',22,
+    /*link*/ "cameronJumpResume.pdf"
   );
   circle[4] = new Circle(
     /*diamater*/ 200,
     /*position (x,y)*/ 110, 320,
     /*speed (x,y)*/ random(r), random(r),
-    /*color,text,fontsize*/ color('violet'),'\nWritten in\nP5.js',22,
-    /*link*/ "https://p5js.org/"
+    /*color,text,fontsize*/ color(110, 84, 148),'\nClick Me\nGitHub',22,
+    /*link*/ "https://github.com/cameronjump/"
   );
   circle[5] = new Circle(
     /*diamater*/ 200,
     /*position (x,y)*/ 320, 320,
     /*speed (x,y)*/ random(r), random(r),
-    /*color,text,fontsize*/ color(51,0,102),'Skills:\nJava\nSwift\nPython\nJavaScript',16,
+    /*color,text,fontsize*/ color(190,147,201),'Proficient with:\nJava\nPython\nExperienced in:\nClojure\nSwift',16,
     /*link*/ ""
   );
   circle[6] = new Circle(
     /*diamater*/ 200,
     /*position (x,y)*/ 530, 320,
     /*speed (x,y)*/ random(r), random(r),
-    /*color,text,fontsize*/ color(0,255,255),'\nClick Me\nContact Me',22,
+    /*color,text,fontsize*/ color(236,151,135),'\nClick Me\nContact Me',22,
     /*link*/ "mailto:cameron.jump@okstate.edu?subject=Oi%20Cameron!"
   );
   circle[7] = new Circle(
     /*diamater*/ 200,
     /*position (x,y)*/ 740, 320,
     /*speed (x,y)*/ random(r), random(r),
-    /*color,text,fontsize*/ color(255,210,0),'Hobbies:\nRunning\nElectronic Protyping\nProgramming',16,
-    /*link*/ ""
+    /*color,text,fontsize*/ color(0,119,181),'\nClick Me\nLinkedIn',22,
+    /*link*/ "https://www.linkedin.com/in/cameron-jump-10328313b/"
   );
 }
 
